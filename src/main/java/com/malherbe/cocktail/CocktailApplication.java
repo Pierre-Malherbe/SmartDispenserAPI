@@ -28,7 +28,7 @@ public class CocktailApplication {
         System.out.println("    When the program terminates, the GPIO state should be shutdown and set to: OFF");
 
         // wait 10 seconds
-        Thread.sleep(1000);
+        Thread.sleep(10000);
 
         System.out.println(" .. shutting down now ...");
 
