@@ -27,14 +27,17 @@ public class CocktailApplication {
         System.out.println("    or you can use the CTRL-C keystroke to terminate at any time.");
         System.out.println("    When the program terminates, the GPIO state should be shutdown and set to: OFF");
 
+
         // wait 10 seconds
         Thread.sleep(10000);
 
         System.out.println(" .. shutting down now ...");
 
+        pin.setShutdownOptions(true, PinState.HIGH, PinPullResistance.OFF);
         // stop all GPIO activity/threads by shutting down the GPIO controller
         // (this method will forcefully shutdown all GPIO monitoring threads and scheduled tasks)
-        gpio.shutdown();
+        //gpio.shutdown();
+
 
         System.out.println("Exiting ShutdownGpioExample");
 
